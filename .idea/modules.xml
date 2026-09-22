@@ -4,9 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/LeComptoir.iml" filepath="$PROJECT_DIR$/.idea/LeComptoir.iml" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <module fileurl="file://$PROJECT_DIR$/engine/engine.iml" filepath="$PROJECT_DIR$/engine/engine.iml" />
 >>>>>>> 7dc68f0f580cf05be53a4b4501f857007b8ab2ee
+=======
+      <module fileurl="file://$PROJECT_DIR$/engine/engine.iml" filepath="$PROJECT_DIR$/engine/engine.iml" />
+>>>>>>> origin/product
     </modules>
   </component>
 </project>
