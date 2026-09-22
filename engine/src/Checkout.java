@@ -8,6 +8,6 @@ public class Checkout{
         for (CartLine cartLine : cart.getCartline()){
             IO.println(cartLine);
         }
-        IO.println("Total: " + cart.getTotalPrice() + "$");
+        IO.println(String.format("Total: %.2f$", cart.getTotalPrice()));
     }
 }

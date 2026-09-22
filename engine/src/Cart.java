@@ -25,6 +25,29 @@ public class Cart {
         if (total >= 50){
             total = total * 0.9 ;
         }
+        ArrayList<CartLine> drinks = new ArrayList<>();
+        for (CartLine cartLine : cartLines){
+            if(cartLine.product.category.equals("DRINK")){
+                drinks.add(cartLine);
+            }
+        }
+        int totalDrinks = 0;
+        for(CartLine drink : drinks){
+            totalDrinks += drink.amount;
+        }
+        int packs = totalDrinks / 3;
+        for(int i = 0; i < packs; i++){
+            CartLine cheapest = null;
+            for(CartLine cartLine : drinks){
+                if(cheapest == null || cartLine.product.price < cheapest.product.price){
+                    cheapest = cartLine;
+                }
+            }
+            if(cheapest !=null) {
+                total -= cheapest.product.price;
+                drinks.remove(cheapest);
+            }
+        }
         return total;
     }
 }
