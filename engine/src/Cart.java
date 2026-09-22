@@ -19,8 +19,11 @@ public class Cart {
 
     public double getTotalPrice(){
         double total = 0;
-        for (CartLine cartLine : cartLines){
+        for (CartLine cartLine : cartLines) {
             total += cartLine.setTotalPrice();
+        }
+        if (total >= 50){
+            total = total * 0.9 ;
         }
         return total;
     }

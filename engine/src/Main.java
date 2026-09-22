@@ -1,5 +1,5 @@
 void main() {
-    Product firstProduct = new Product(1, "Coca-Cola", 0.50, "DRINK");
+    Product firstProduct = new Product(1, "Coca-Cola", 10.50, "DRINK");
     Product secondProduct = new Product(2, "mikado", 3, "FOOD");
     CartLine firstProductCheckout= new CartLine(firstProduct, 5);
     CartLine secondProductCheckout = new CartLine(secondProduct, 4);
