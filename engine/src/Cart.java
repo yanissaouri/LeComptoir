@@ -48,6 +48,7 @@ public class Cart {
                 drinks.remove(cheapest);
             }
         }
+
         return total;
     }
 }
