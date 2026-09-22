@@ -1,6 +1,6 @@
 void main() {
-    Product coca = new Product(1, "Coca-Cola", 0.50f, "DRINK");
-    CartLine test= new CartLine(coca, 5);
+    Product firstProduct = new Product(1, "Coca-Cola", 0.50f, "DRINK");
+    CartLine firstProductCheckout= new CartLine(firstProduct, 5);
 
-    IO.println(test);
+    IO.println(firstProductCheckout);
 }
