@@ -6,4 +6,9 @@ public class CartLine {
         this.product = product;
         this.amount = amount;
     }
+
+    @Override
+    public String toString() {
+        return amount + " x " + product.name + " " + product.price + "$";
+    }
 }
