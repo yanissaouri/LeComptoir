@@ -7,8 +7,13 @@ public class CartLine {
         this.amount = amount;
     }
 
+    public float setTotalPrice(){
+        return product.price * amount;
+    }
+
     @Override
     public String toString() {
-        return amount + " x " + product.name + " " + product.price + "$";
+        float newPrice = setTotalPrice();
+        return amount + " x " + product.name + " " + newPrice + "$";
     }
 }
