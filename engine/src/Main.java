@@ -1,19 +1,6 @@
-
 void main() {
+    Product coca = new Product(1, "Coca-Cola", 0.50f, "DRINK");
+    CartLine test= new CartLine(coca, 5);
 
-    String products = "";
-    String drinks = "";
-    int amount = 0;
-    float tva = 0.2f;
-    int rewardsCard = 0;
-    
-
-
-
-    IO.println(String.format("Hello and welcome!"));
-
-    for (int i = 1; i <= 5; i++) {
-
-        IO.println("i = " + i);
-    }
+    IO.println(test);
 }
