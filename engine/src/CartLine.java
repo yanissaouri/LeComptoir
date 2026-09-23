@@ -11,7 +11,7 @@ public class CartLine {
         return product.price * amount;
     }
 
-    @Override
+    @Override6
     public String toString() {
         float newPrice = setTotalPrice();
         return amount + " x " + product.name + " " + newPrice + "$";
