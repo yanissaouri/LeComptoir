@@ -22,7 +22,7 @@ public class Cart {
     public double getTotalPrice(){
         double total = 0;
         for (CartLine cartLine : cartLines) {
-            total += cartLine.setTotalPrice();
+            total += cartLine.totalPrice();
         }
         if (total >= 50){
             total = total * 0.9 ;

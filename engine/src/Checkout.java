@@ -15,7 +15,7 @@ public class Checkout{
         double foodHT = 0;
         for(CartLine cartLine : cart.getCartline()){
             if(cartLine.product.getCategory().equals(Category.FOOD)){
-                foodHT += cartLine.setTotalPrice();
+                foodHT += cartLine.totalPrice();
             }
         }
 
