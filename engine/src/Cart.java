@@ -1,3 +1,5 @@
+import enums.Category;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +29,7 @@ public class Cart {
         }
         ArrayList<CartLine> drinks = new ArrayList<>();
         for (CartLine cartLine : cartLines){
-            if(cartLine.product.category.equals("DRINK")){
+            if(cartLine.product.getCategory().equals(Category.DRINK)){
                 drinks.add(cartLine);
             }
         }
@@ -39,12 +41,12 @@ public class Cart {
         for(int i = 0; i < packs; i++){
             CartLine cheapest = null;
             for(CartLine cartLine : drinks){
-                if(cheapest == null || cartLine.product.price < cheapest.product.price){
+                if(cheapest == null || cartLine.product.getPrice() < cheapest.product.getPrice()){
                     cheapest = cartLine;
                 }
             }
             if(cheapest !=null) {
-                total -= cheapest.product.price;
+                total -= cheapest.product.getPrice();
                 drinks.remove(cheapest);
             }
         }

@@ -1,3 +1,5 @@
+import enums.Category;
+
 public class Checkout{
     Cart cart;
 
@@ -12,7 +14,7 @@ public class Checkout{
 
         double foodHT = 0;
         for(CartLine cartLine : cart.getCartline()){
-            if(cartLine.product.category.equals("FOOD")){
+            if(cartLine.product.getCategory().equals(Category.FOOD)){
                 foodHT += cartLine.setTotalPrice();
             }
         }

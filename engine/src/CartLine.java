@@ -8,12 +8,12 @@ public class CartLine {
     }
 
     public double setTotalPrice(){
-        return product.price * amount;
+        return product.getPrice() * amount;
     }
 
     @Override
     public String toString() {
         double newPrice = setTotalPrice();
-        return amount + " x " + product.name + " " + newPrice + "$";
+        return amount + " x " + product.getName() + " " + newPrice + "$";
     }
 }
