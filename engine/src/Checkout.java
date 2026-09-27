@@ -2,27 +2,21 @@ import enums.Category;
 
 public class Checkout{
     Cart cart;
+    private TvaCalculator tva;
 
-    public Checkout(Cart cart){
+    public Checkout(Cart cart, TvaCalculator tva){
         this.cart = cart;
+        this.tva = tva;
     }
     public void displayTicket(){
         for (CartLine cartLine : cart.getCartline()){
             IO.println(cartLine);
         }
+
         double totalHT = cart.getTotalPrice();
-
-        double foodHT = 0;
-        for(CartLine cartLine : cart.getCartline()){
-            if(cartLine.product.getCategory().equals(Category.FOOD)){
-                foodHT += cartLine.totalPrice();
-            }
-        }
-
-        double foodTVA = foodHT * 0.055;
-        double drinkHT = totalHT - foodHT;
-        double drinkTVA = drinkHT * 0.2;
-        double totalTTC = totalHT + foodTVA + drinkTVA;
+        double foodTVA = tva.getFoodTVA();
+        double drinkTVA = tva.getDrinkTVA();
+        double totalTTC = tva.getTotalTTC();
 
         IO.println(String.format("HT: %.2f$", totalHT));
         IO.println(String.format("TVA: 5.5%% %.2f$ food", foodTVA));

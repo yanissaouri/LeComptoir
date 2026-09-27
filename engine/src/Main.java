@@ -10,6 +10,7 @@ void main() {
     cart.addCartline(firstProductCheckout);
     cart.addCartline(secondProductCheckout);
 
-    Checkout checkout = new Checkout(cart);
+    TvaCalculator tva = new TvaCalculator(cart.getTotalPrice(), cart.getCartline());
+    Checkout checkout = new Checkout(cart, tva);
     checkout.displayTicket();
 }
