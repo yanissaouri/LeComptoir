@@ -1,4 +1,4 @@
-package Discounts;
+package main.Discounts;
 
 public class BeautyDiscount {
 }

@@ -1,3 +1,5 @@
+package main.Discounts;
+
 public class FidelityCard {
     int fidelityCard;
 

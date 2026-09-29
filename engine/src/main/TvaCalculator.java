@@ -1,6 +1,7 @@
+package main;
 
+import main.enums.Category;
 
-import enums.Category;
 import java.util.List;
 
 public class TvaCalculator {

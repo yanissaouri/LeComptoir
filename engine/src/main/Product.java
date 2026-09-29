@@ -1,4 +1,6 @@
-import enums.Category;
+package main;
+
+import main.enums.Category;
 
 public class Product {
     private int reference;
